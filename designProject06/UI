@@ -1,0 +1,35 @@
+int canvasLeftCornerX = 30;
+int canvasLeftCornerY = 60;
+
+void UI() {
+  bar = new ControlP5(this, createFont("微软雅黑", 14));
+
+  int barSize = 200;
+  int barHeight = 20;
+  int barInterval = barHeight + 10;
+
+
+
+  
+  bar.addSlider("R", 0, 255, 24, canvasLeftCornerX,  canvasLeftCornerY+barInterval*1, barSize, barHeight).setLabel("背景R值");
+  bar.addSlider("G", 0, 255, 99, canvasLeftCornerX,  canvasLeftCornerY+barInterval*2, barSize, barHeight).setLabel("背景G值");
+  bar.addSlider("B", 0, 255, 156, canvasLeftCornerX,  canvasLeftCornerY+barInterval*3, barSize, barHeight).setLabel("背景B值");
+ 
+
+  bar.setAutoDraw(false);
+}
+
+
+
+void UIShow() {
+  cam.beginHUD();  
+
+  bar.draw();
+  cam.endHUD();
+
+  if (mouseX<400 && mouseY< height) {
+    cam.setActive(false);
+  } else {
+    cam.setActive(true);
+  }
+}
