@@ -1,0 +1,1 @@
+Go through each possibility (for example, five points is the factorial scheme of 5) to see if the newly added path is feasible and shortest in length, if it is the shortest, swap, swap can change the added point to the join position, that is, depict the path in disguise.
